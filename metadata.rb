@@ -1,6 +1,6 @@
 name 'server_utils'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Ed Overton'
+maintainer_email 'e.overton@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures server_utils'
 long_description 'Installs/Configures server_utils'
