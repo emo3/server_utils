@@ -17,6 +17,7 @@ action :run do
   log "mnt_point = #{new_resource.mnt_point}"
   #######################################
   # Set physical volume
+  # lvm_physical_volume new_resource.device not_if "vgdisplay | grep -q '#{new_resource.lvg_name}'"
   lvm_physical_volume new_resource.device
 
   #######################################
@@ -31,6 +32,6 @@ action :run do
     group new_resource.lvg_name
     size new_resource.lv_size
     filesystem new_resource.fs_type
-    mount_point new_resource.mnt_point
+    mount_point location: new_resource.mnt_point, options: 'defaults'
   end
 end
