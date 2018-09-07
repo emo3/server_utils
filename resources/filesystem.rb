@@ -9,6 +9,8 @@ property :fs_type,   String, default: 'xfs'
 property :mnt_point, String, default: '/agents'
 
 action :run do
+  log "device   = #{new_resource.device}"
+  log "lvg_name = #{new_resource.lvg_name}"
   #######################################
   # Set physical volume
   lvm_physical_volume new_resource.device
