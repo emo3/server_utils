@@ -9,12 +9,12 @@ property :fs_type,   String, default: 'xfs'
 property :mnt_point, String, default: '/agents'
 
 action :run do
-  log "device    = #{new_resource.device}"
-  log "lvg_name  = #{new_resource.lvg_name}"
-  log "lv_name   = #{new_resource.lv_name}"
-  log "lv_size   = #{new_resource.lv_size}"
-  log "fs_type   = #{new_resource.fs_type}"
-  log "mnt_point = #{new_resource.mnt_point}"
+  # log "device    = #{new_resource.device}"
+  # log "lvg_name  = #{new_resource.lvg_name}"
+  # log "lv_name   = #{new_resource.lv_name}"
+  # log "lv_size   = #{new_resource.lv_size}"
+  # log "fs_type   = #{new_resource.fs_type}"
+  # log "mnt_point = #{new_resource.mnt_point}"
   #######################################
   # Set physical volume
   # lvm_physical_volume new_resource.device not_if "vgdisplay | grep -q '#{new_resource.lvg_name}'"
