@@ -2,7 +2,7 @@
 # Cookbook:: server_utils
 # Spec:: default
 #
-# Copyright:: 2018, The Authors, All Rights Reserved.
+# Copyright:: 2018, Ed Overton
 
 require 'spec_helper'
 
