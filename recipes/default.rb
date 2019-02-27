@@ -2,4 +2,4 @@
 # Cookbook:: server_utils
 # Recipe:: default
 #
-# Copyright:: 2018, Ed Overton
+# Copyright:: 2019, Ed Overton, Apache 2.0
