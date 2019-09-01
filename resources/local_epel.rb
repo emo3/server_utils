@@ -4,14 +4,6 @@ property :epel_ver, String, default: '7'
 property :web_srv,  String, default: '10.1.1.30'
 
 action :install do
-  # Delete any existing epel* files
-  Dir["/etc/yum.repos.d/epel*"].each do |path|
-    file ::File.expand_path(path) do
-      # next if file.basename(path) == "epel#{new_resource.epel_ver}.repo"
-      action :delete
-    end
-  end
-
   # create local epel repo
   template "/etc/yum.repos.d/epel#{new_resource.epel_ver}.repo" do
     source 'epel.erb'
