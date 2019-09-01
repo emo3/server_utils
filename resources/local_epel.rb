@@ -7,7 +7,7 @@ action :install do
   # Delete any existing epel* files
   Dir["/etc/yum.repos.d/epel*"].each do |path|
     file ::File.expand_path(path) do
-      next if file == "epel#{new_resource.epel_ver}.repo"
+      # next if file.basename(path) == "epel#{new_resource.epel_ver}.repo"
       action :delete
     end
   end
