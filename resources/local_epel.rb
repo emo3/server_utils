@@ -5,7 +5,7 @@ property :web_srv,  String, default: 'http://10.1.1.30'
 
 action :install do
   # Delete any existing epel* files
-  Dir["/etc/you.repos.d/epel*"].each do |path|
+  Dir["/etc/yum.repos.d/epel*"].each do |path|
     file ::File.expand_path(path) do
       action :delete
     end
