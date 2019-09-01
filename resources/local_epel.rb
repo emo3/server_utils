@@ -14,7 +14,6 @@ action :install do
   # create local epel repo
   template "/etc/yum.repos.d/epel#{new_resource.epel_ver}" do
     source 'epel.erb'
-    cookbook 'nc_tools'
     variables(
       epel_ver: new_resource.epel_ver,
       web_srv:  new_resource.web_srv
