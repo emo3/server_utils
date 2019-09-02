@@ -1,6 +1,6 @@
 [aepel]
 name=epel-<%= @epel_ver %>
-baseurl=http://<%= @web_srv %>/epel<%= @epel_ver %>/
+baseurl=<%= @web_srv %>/epel<%= @epel_ver %>/
 gpgcheck=1
 enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-<%= @epel_ver %>

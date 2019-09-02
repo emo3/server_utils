@@ -1,7 +1,7 @@
 resource_name :epel_local_repo
 
 property :epel_ver, String, default: '7'
-property :web_srv,  String, default: '10.1.1.30'
+property :web_srv,  String, default: 'http://10.1.1.30'
 
 action :install do
   # create local epel repo
