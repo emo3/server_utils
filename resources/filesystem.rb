@@ -2,7 +2,7 @@ resource_name :create_xfs
 provides :create_xfs
 
 property :device,    String, default: '/dev/sdb'
-property :lvg_name,  String, default: 'apmvg'
+property :lvg_name,  String, default: 'agtvg'
 property :lv_name,   String, default: 'lvagent'
 property :lv_size,   String, default: '10G'
 property :fs_type,   String, default: 'xfs'
