@@ -1,4 +1,4 @@
-resource_name :epel_local_repo
+provides :epel_local_repo
 
 property :web_srv,  String, default: 'http://10.1.1.30'
 

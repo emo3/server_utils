@@ -1,4 +1,3 @@
-resource_name :create_xfs
 provides :create_xfs
 
 property :device,    String, default: '/dev/sdb'

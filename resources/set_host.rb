@@ -1,4 +1,3 @@
-resource_name :set_hostname
 provides :set_hostname
 
 property :host_ip,   String, default: '10.1.1.10'
