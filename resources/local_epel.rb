@@ -1,10 +1,10 @@
 provides :epel_local_repo
+unified_mode true
 
-property :web_srv,  String, default: 'http://10.1.1.30'
+property :web_srv, String, default: 'http://10.1.1.30'
 
 action :install do
-  epel_ver = case
-             when node['platform_version'] < '8'
+  epel_ver = if node['platform_version'] < '8'
                '7'
              else
                '8'
@@ -17,7 +17,7 @@ action :install do
       epel_ver: epel_ver,
       web_srv:  new_resource.web_srv
     )
-    mode 0644
+    mode '0644'
     action :create
   end
 
@@ -25,8 +25,7 @@ action :install do
   template "/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-#{epel_ver}" do
     source "RPM-GPG-KEY-EPEL-#{epel_ver}.erb"
     cookbook 'server_utils'
-    mode 0644
+    mode '0644'
     action :create
   end
-
 end # action :install do

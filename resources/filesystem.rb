@@ -1,4 +1,5 @@
 provides :create_xfs
+unified_mode true
 
 property :device,    String, default: '/dev/sdb'
 property :lvg_name,  String, default: 'agtvg'

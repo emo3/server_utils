@@ -1,4 +1,5 @@
 provides :set_hostname
+unified_mode true
 
 property :host_ip,   String, default: '10.1.1.10'
 property :host_name, String, default: 'chefsrv'
